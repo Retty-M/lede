@@ -102,7 +102,7 @@ jobs:
           
           # 常用LuCI插件选择:
           cat >> .config <<EOF
-          # CONFIG_PACKAGE_luci-app-adbyby-plus is not set
+          CONFIG_PACKAGE_luci-app-adbyby-plus=y
           # CONFIG_PACKAGE_luci-app-aria2 is not set
           CONFIG_PACKAGE_luci-app-baidupcs-web=y
           # CONFIG_PACKAGE_luci-app-docker is not set
@@ -112,6 +112,7 @@ jobs:
           # CONFIG_PACKAGE_luci-app-minidlna is not set
           # CONFIG_PACKAGE_luci-app-openvpn is not set
           # CONFIG_PACKAGE_luci-app-qbittorrent is not set
+          CONFIG_PACKAGE_luci-app-ssr-plus=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Server=y
@@ -126,9 +127,9 @@ jobs:
           # CONFIG_PACKAGE_luci-app-firewall is not set
           # CONFIG_PACKAGE_luci-app-flowoffload is not set
           # CONFIG_PACKAGE_luci-app-sfe is not set
-          CONFIG_PACKAGE_luci-app-shairplay=y
+          # CONFIG_PACKAGE_luci-app-shairplay is not set
           CONFIG_PACKAGE_luci-app-vlmcsd=y
-          # CONFIG_PACKAGE_luci-app-accesscontrol is not set
+          CONFIG_PACKAGE_luci-app-accesscontrol=y
           # CONFIG_PACKAGE_luci-app-zerotier is not set
           # CONFIG_PACKAGE_strongswan is not set
           # CONFIG_PACKAGE_luci-app-nlbwmon is not set
@@ -136,7 +137,7 @@ jobs:
           # CONFIG_PACKAGE_luci-app-samba4 is not set
           # CONFIG_PACKAGE_luci-app-vsftpd is not set
           CONFIG_PACKAGE_luci-app-unblockmusic=y
-          # CONFIG_PACKAGE_luci-app-ddns is not set
+          CONFIG_PACKAGE_luci-app-ddns=y
           # CONFIG_PACKAGE_luci-app-wol is not set
           # CONFIG_PACKAGE_luci-app-xlnetacc is not set
           # CONFIG_PACKAGE_luci-app-upnp is not set
@@ -170,10 +171,10 @@ jobs:
           
           # 取消编译VMware镜像以及镜像填充 (不要删除被缩进的注释符号):
           cat >> .config <<EOF
-          CONFIG_TARGET_IMAGES_PAD=y
-          CONFIG_VMDK_IMAGES=y
-          CONFIG_GRUB_EFI_IMAGES=y
-          CONFIG_GRUB_CONSOLE=y
+          # CONFIG_TARGET_IMAGES_PAD is not set
+          # CONFIG_VMDK_IMAGES is not set
+          # CONFIG_GRUB_EFI_IMAGES is not set
+          # CONFIG_GRUB_CONSOLE is not set
           EOF
       
           #
